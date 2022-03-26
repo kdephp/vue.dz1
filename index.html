@@ -31,7 +31,7 @@
             </ul>
             <div v-if="isActive">
                 <button class="btn" :disabled="prevDisabled" @click="prev">Назад</button>
-                <button class="btn primary" @click="nextOfFinish">Вперед</button>
+                <button class="btn primary" @click="nextOfFinish"> {{ isLastStep ? 'Закончить' : 'Вперед' }}</button>
             </div>
             <div v-else>
                 <button class="btn" @click="reset">Начать заного</button>

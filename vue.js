@@ -6,7 +6,6 @@ const App = {
     data() {
         return {
             activeIndex: 0, // то, что позволяет определить текущий активный шиг
-            myHtml: 'Закончить',
             isActive: true,
             steps: [
                 {
@@ -49,7 +48,9 @@ const App = {
         nextOfFinish(event) {
             if (this.activeIndex !== this.steps.length - 1) {
                 this.activeIndex++;
+                (console.log(event.tagret))
             } else {
+
                 this.isActive = false
             }
         },
